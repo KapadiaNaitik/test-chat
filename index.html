@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      .floating-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        padding: 15px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+      }
+      .floating-button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+    <script src="https://widget.lamatic.ai/chat/emojiPicker.js"></script>
+
+    <script src="https://widget.lamatic.ai/chat/index.js"></script>
+    <script>
+      (function () {
+        // Configuration
+        var CHAT_DIALOG_CONFIG = {
+          apiUrl: 'https://production-wetbattery-bumpyglass.lamatic.workers.dev',
+          workflowId: '7ddc606d-0273-4095-87bb-8f1041f7a9ba',
+          floatingButtonIcon:
+            'https://owcowialbyyyniqocppr.supabase.co/storage/v1/object/public/icons/n8n.png',
+          imageUrl:
+            'https://owcowialbyyyniqocppr.supabase.co/storage/v1/object/public/icons/n8n.png',
+          position: 'right',
+          errorMessage: 'Some error has taken place',
+        };
+
+        document.addEventListener('DOMContentLoaded', function () {
+          new ChatDialog(CHAT_DIALOG_CONFIG);
+        });
+      })();
+    </script>
+  </head>
+  <body>
+    <!-- <button id="chatButton" class="floating-button">💬</button> -->
+  </body>
+</html>
